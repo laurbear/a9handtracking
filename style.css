@@ -1,0 +1,171 @@
+html,
+body {
+  /* set a default font for the whole page */
+  font-family: "Nunito", sans-serif;
+  background-color: white;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+header {
+  /* Make a top bar with a drop shadow, with horizontally-arranged items */
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0px;
+  /*font-family: 'Baloo 2', cursive;*/
+}
+
+button.active {
+  background-color: hsla(100, 50%, 90%, 1);
+}
+
+.handsfree-video {
+  display: none;
+}
+
+.handsfree-video,
+.handsfree-canvas {
+  /*   display: none; */
+  position: absolute;
+  z-index: 200;
+  top: 0px;
+  left: 0px;
+
+  width: 200px;
+}
+
+.handsfree-debugger {
+  /*   display: none; */
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transform: scale(-1, 1);
+}
+
+video {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  z-index: 40;
+}
+
+#view {
+  position: relative;
+  z-index: 0;
+  border: 2px solid magenta;
+  width: min-content;
+  width: max-content;
+}
+
+.canvas-holder {
+  z-index: 100;
+  position: relative;
+  margin: 0px auto;
+  border: 2px solid white;
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+#controls {
+  width: 380px;
+  height: 100px;
+  background-color: hsla(100, 0%, 100%, 0.9);
+  z-index: 100;
+
+  top: 0px;
+  position: absolute;
+  flex: 1;
+}
+
+button.active {
+  background-color: hsla(100, 100%, 50%, 1);
+}
+
+.row {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+}
+
+#app {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+  /*border: 1px solid cyan;*/
+  box-sizing: border-box;
+}
+
+.error {
+  padding: 1px 3px;
+  display: inline-block;
+  background-color: hsla(10, 100%, 90%, 0.4);
+  color: hsla(10, 100%, 30%, 1);
+}
+
+.toptag {
+  right: -5px;
+  top: -5px;
+  border-radius: 10px;
+  font-size: 50%;
+  position: absolute;
+  padding: 1px 3px;
+  display: inline-block;
+  background-color: hsla(10, 0%, 100%, 100);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.overlay {
+  z-index: 0;
+  pointer-events: none;
+  /*border:  1px solid magenta;*/
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  overflow: scroll;
+  position: absolute;
+}
+
+.fill {
+  z-index: 0;
+  pointer-events: none;
+  background-color: hsla(100, 100%, 50%, 0.4);
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+.panel {
+  padding: 2px;
+  margin: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.callout {
+  border-radius: 5px;
+  padding: 1px 3px;
+
+  display: inline-block;
+  background-color: hsla(100, 100%, 50%, 0.4);
+  border-radius: hsla(100, 100%, 80%, 1);
+}
